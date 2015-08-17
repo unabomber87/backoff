@@ -1,0 +1,73 @@
+{# 'app/Resources/views/layout.html.twig' #}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Backoffice | </title>
+
+        {% block stylesheets %}
+            <!-- Bootstrap core CSS -->
+
+            <link href="{{ asset('/public/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
+
+            <link href="{{ asset('/public/fonts/css/font-awesome.min.css') }}" type="text/css" rel="stylesheet">
+            <link href="{{ asset('/public/css/animate.min.css') }}" type="text/css" rel="stylesheet">
+
+            <!-- Custom styling plus plugins -->
+            <link href="{{ asset('/public/css/custom.css') }}" type="text/css" rel="stylesheet">
+            <link href="{{ asset('/public/css/icheck/flat/green.css') }}" type="text/css" rel="stylesheet">
+        {% endblock %}
+
+        <script src="{{ asset('/public/js/jquery.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('/public/js/nprogress.js') }}" type="text/javascript"></script>
+        <script>
+            NProgress.start();
+        </script>
+
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript"></script>
+              <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js" type="text/javascript"></script>
+        <![endif]-->
+
+    </head>
+
+    <body class="nav-md">
+        <div class="container body">
+            <div class="main_container">
+                {% include 'snippets/header.html.twig' %}
+                {% include 'snippets/topbar.html.twig' %}
+                <div class="right_col" role="main">
+                    {% block content %} 
+                    {% endblock %}
+                    {% include 'snippets/footer.html.twig' %}
+                </div>
+            </div>
+        </div>
+
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('/public/js/bootstrap.min.js') }}"></script>
+            <!-- gauge js -->
+            <script type="text/javascript" src="{{ asset('/public/js/gauge/gauge.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('/public/js/gauge/gauge_demo.js') }}"></script>
+            <!-- chart js -->
+            <script type="text/javascript" src="{{ asset('/public/js/chartjs/chart.min.js') }}"></script>
+            <!-- bootstrap progress js -->
+            <script type="text/javascript" src="{{ asset('/public/js/progressbar/bootstrap-progressbar.min.js')}}"></script>
+            <script type="text/javascript" src="{{ asset('/public/js/nicescroll/jquery.nicescroll.min.js')}}"></script>
+            <!-- icheck -->
+            <script type="text/javascript" src="{{ asset('/public/js/icheck/icheck.min.js')}}"></script>
+            <!-- daterangepicker -->
+            <script type="text/javascript" src="{{ asset('/public/js/moment.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('/public/js/datepicker/daterangepicker.js')}}"></script>
+
+            <script type="text/javascript" src="{{ asset('/public/js/custom.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>
