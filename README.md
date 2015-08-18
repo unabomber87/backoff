@@ -3,6 +3,8 @@ backoff
 
 A Symfony project created on August 12, 2015, 12:10 pm.
 
+A Symfony backoffice using Fos userbundle
+
 Install instruction:
 
 clone repository : git clone https://github.com/unabomber87/backoff
