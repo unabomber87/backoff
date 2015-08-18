@@ -11,5 +11,5 @@ install dependencies : composer install
 
 install database : php app/console doctrine:schema:update --force
 
-create first user : php app/console fos:user:create <USERNAME>
+create first user : php app/console fos:user:create USERNAME
 
